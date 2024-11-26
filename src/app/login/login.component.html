@@ -1,0 +1,28 @@
+<div class="login-container">
+    <img class="film" src="assets/film.png" alt="img">
+    <div class="logo">Rotten Potatoes</div>
+    <div class="desc">
+        The command npm install bootstrap is used to install Bootstrap, a widely-used 
+        CSS framework, into your JavaScript project. This command downloads Bootstrap’s files, 
+        which include pre-designed CSS styles and JavaScript components that make it easy to create 
+        a responsive, mobile-first website. Once installed, Bootstrap is saved in your project's node_modules 
+        folder, and an entry is added to your package.json file to keep track of it as a project dependency. 
+        After installation, you can import Bootstrap's CSS and JavaScript into your project files to start using 
+        its styles and components, streamlining the design process significantly.
+
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="Username" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="uname" class="form-control" [(ngModel)]="Password" />
+        </div>
+        <div class="btn-container">
+            <div class="error">{{errorMsg}}</div>
+            <button class="btn btn-dark" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Add spacing between stars and rating value */
+}
+
+.rating-value {
+  font-size: 1.5rem; /* Make the number slightly larger */
+  font-weight: bold; /* Make the number bold */
+  color: black; /* Set the number color (change if needed) */
+}
+
+ngb-rating .star {
+  font-size: 2rem; /* Increase star size */
+}
+
+ngb-rating {
+  --ngb-rating-icon-empty: #ddd; /* Customize empty star color */
+  font-size: 2rem; /* Set overall star size */
+}

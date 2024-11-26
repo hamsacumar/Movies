@@ -1,0 +1,109 @@
+.home-container {
+    display: flex;
+    margin-bottom: 10px;
+    .all-movies{
+        width: 75%;
+        min-height: calc(100vh - 80px);
+        border-right: 1px solid #fdc827;
+        padding: 20px 40px;
+        font-family: "Roboto", sans-serif;
+        .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            h4{
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 5px solid #ff9900;
+                padding-left: 10px;
+            }
+            .view-all{
+                color: #ff9900;
+                cursor: pointer;
+            }
+        }
+        .movies-thumbnail{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+        }
+        .movie {
+            .cover {
+                img {
+                    border-radius: 5px;
+                }
+            }
+        }
+        .detail {
+            width: 180px;
+            .name{
+                font-weight: bold;
+                height: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    .popular-movies {
+      width: 25%;
+      min-height: calc(100vh - 80px);
+      padding: 20px 10px;
+      font-family: "Roboto", sans-serif;
+  
+      h4 {
+          text-transform: uppercase;
+          font-weight: bold;
+          border-left: 5px solid #ff9900;
+          padding-left: 10px;
+          margin-bottom: 30px;
+      }
+  
+      .movies {
+          display: flex;
+          flex-direction: column; /* Stack movies vertically */
+          gap: 10px; /* Space between movies */
+      }
+  
+      .movie {
+          display: flex; /* Flexbox to display name and rating side by side */
+          align-items: center; /* Vertically center-align items */
+          justify-content: space-between; /* Space out name and rating */
+          margin-bottom: 10px;
+      }
+  
+      .detail {
+          display: flex; /* Flexbox inside the movie to align name and rating side by side */
+          justify-content: space-between;
+          width: 100%; /* Make the container fill the width */
+      }
+  
+      .name {
+          margin-top: 13px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-right: 15px; /* Space between name and rating */
+          flex: 1; /* Allow the name to take the available space */
+      }
+  
+      .rating {
+          display: flex;
+          align-items: center; /* Center the rating vertically */
+      }
+  }
+  
+  
+}
+
+.rating {
+
+      padding-right: 45px;
+      position: relative;
+      .rating-value {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        font-weight: bold;
+      }
+    }
