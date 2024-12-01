@@ -1,27 +1,52 @@
-# Movies
+# 👋 Welcome to My MOVIE REVIEW CODES
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Hi, I'm Satheeskumar hamsakumar, a passionate developer, maker, and problem-solver. I love exploring new technologies and creating solutions that make an impact. Here's a little about me:
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌟 About Me
 
-## Code scaffolding
+- 🔧 **Skills**:  
+  - Frontend: React, JavaScript, HTML, CSS  ,Angular , React
+  - Backend: Python (with AI integration), APIs  , Node, Express
+  - Hardware: Arduino, IoT, embedded systems  
+  - DevOps: Linux (Kali), CUDA optimization  
+- 🌱 **Currently Learning**:  
+  - Advanced DevOps skills
+  - Web traffic optimization strategies  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💡 Interests
 
-## Running unit tests
+- 🌐 Full-stack development  
+- 📱 Mobile app development  
+- ⚙️ Electronics and embedded systems  
+- 📈 Website growth and traffic generation strategies  
+- 🛠️ DevOps and cloud infrastructure  
+- 🤖 Artificial Intelligence and Machine Learning  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Movie Review Website
 
-## Further help
+Welcome to the **Movie Review Website**! It is just a front-end.This platform allows users to browse, rate, and review their favorite movies. Whether you're a casual moviegoer or a film enthusiast, this website provides a great space to share your opinions and discover new films based on reviews from others.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## Features
+
+- 🎥 **Browse Movies**: Easily explore a wide range of movies across various genres.
+- ⭐ **Rate Movies**: Rate movies you've seen from 1 to 5 stars.
+- 💬 **Write Reviews**: Share your thoughts on movies by writing detailed reviews.
+- 📊 **Movie Statistics**: View ratings and reviews for each movie to help you decide what to watch.
+
+---
+
+## Tech Stack
+
+- **Frontend**: Angular, HTML, CSS
+
+---
