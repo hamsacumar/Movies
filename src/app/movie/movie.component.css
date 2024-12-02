@@ -1,24 +1,29 @@
 .movie-container {
-    width: 1400px;
+    max-width: 1400px; /* Responsive width */
+    width: 90%;
     margin: 0 auto;
 
     .top {
         display: flex;
+        justify-content: space-between;
+        gap: 20px;
 
         .left {
-            width: 450px;
+            flex: 0 0 450px; /* Fixed width for left section */
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
+
             .name {
+                padding-top: 50px;
                 font-size: 36px;
                 font-weight: bold;
             }
 
             .rating {
-                width: 100%; 
-                height: 100%; 
-                margin-bottom: 20px; 
-                
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+
                 .rating-value {
                     margin-left: 20px;
                     font-weight: bold;
@@ -26,14 +31,139 @@
             }
 
             .cover {
-                width: 100%; 
+                width: 100%;
                 height: 500px;
-                margin-bottom: 20px; 
+                margin-bottom: 20px;
 
                 img {
                     width: 100%;
                     height: 100%;
+                    object-fit: cover; /* Maintain aspect ratio */
+                    border-radius: 5px; /* Optional styling */
                 }
+            }
+        }
+
+        .right {
+            flex: 1; /* Allow right section to take remaining space */
+            padding: 50px;
+
+            .title {
+                margin-bottom: 30px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .rating-form {
+                .form-group {
+                    margin-top: 20px;
+
+                    label {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        display: block; /* Ensure label is above input */
+                    }
+
+                    textarea {
+                        resize: none;
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                    }
+
+                    input[type="text"] {
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                    }
+
+                    .rating {
+                        margin-top: -13px;
+                    }
+                }
+
+                .btn-container {
+                    margin-top: 30px;
+
+                    .btn {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #000;
+                        color: #fff;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        margin-top: 50px;
+
+        .title {
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .reviews {
+            width: 100%; /* Flexible width */
+            max-width: 1000px;
+            margin: 0 auto;
+
+            .review {
+                margin-bottom: 25px;
+                background-color: #f1f1f1;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+                .review-details {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    .review-left {
+                        .author {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+
+                        .author_dt {
+                            opacity: 0.7;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .review-right {
+                        .rating {
+                            display: flex;
+                            align-items: center;
+
+                            .rating-value {
+                                margin-left: 20px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .review-text {
+                    font-style: italic;
+                    font-size: 18px;
+                }
+            }
+
+            .no-reviews {
+                font-style: italic;
+                font-size: 18px;
+                text-align: center;
+                color: #666;
             }
         }
     }

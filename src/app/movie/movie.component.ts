@@ -3,11 +3,13 @@ import { HeaderComponent } from "../header/header.component";
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { StarRatingComponent } from "../feature/star-rating/star-rating.component";
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-movie',
   standalone: true,
-  imports: [HeaderComponent, StarRatingComponent],
+  imports: [HeaderComponent, StarRatingComponent,CommonModule],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.css'
 })
