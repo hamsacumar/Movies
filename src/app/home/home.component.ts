@@ -33,32 +33,26 @@ export class HomeComponent {
   }
 
   getTrendingMovies(): void {
-    this.http
-      .get('http://localhost:4200/assets/data/trending-movies.json')
-      .subscribe((movies: any) => {
-          this.trendingMovies = movies;
-          console.log(this.trendingMovies);
-      });
+    this.http.get('http://localhost:5100/api/movies/trending').subscribe((movies: any) => {
+      this.trendingMovies = movies;
+      console.log(this.trendingMovies);
+    });
   }
-
+  
   getTheatreMovies(): void {
-    this.http
-      .get('http://localhost:4200/assets/data/theatre-movies.json')
-      .subscribe((movies: any) => {
-          this.theatreMovies = movies;
-          console.log(this.theatreMovies);
-      });
+    this.http.get('http://localhost:5100/api/movies/theatre').subscribe((movies: any) => {
+      this.theatreMovies = movies;
+      console.log(this.theatreMovies);
+    });
   }
-
+  
   getPopularMovies(): void {
-    this.http
-      .get('http://localhost:4200/assets/data/popular-movies.json')
-      .subscribe((movies: any) => {
-          this.popularMovies = movies;
-          console.log(this.popularMovies);
-      });
+    this.http.get('http://localhost:5100/api/movies/popular').subscribe((movies: any) => {
+      this.popularMovies = movies;
+      console.log(this.popularMovies);
+    });
   }
-
+  
   goToMovie(type:string,id:string){
     this.router.navigate(['movie',type,id]);
   }
