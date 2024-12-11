@@ -11,22 +11,19 @@ namespace MongoExample.Models
         public ObjectId? _id { get; set; }
 
         [BsonElement("cover")]
-        [JsonPropertyName("cover")]
         public string? Cover { get; set; }
 
         [BsonElement("id")]
-        [JsonPropertyName("id")]
         public string? id { get; set; }
 
         [BsonElement("name")]
-        [JsonPropertyName("name")]
         public string? name { get; set; }
 
         [BsonElement("rating")]
-        [JsonPropertyName("rating")]
         public string? rating { get; set; }
 
         [BsonElement("reviews")]
+
         public object? reviews { get; set; }
     }
 }

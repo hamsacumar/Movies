@@ -14,21 +14,14 @@ namespace MongoExample.Services
 
         public MongoDBService(IOptions<MongoDBSettings> mongoDBSettings)
         {
-            // Initialize MongoDB client
             MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
+            var database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
 
-            // Separate databases
-            IMongoDatabase popularDatabase = client.GetDatabase("PopularDatabase");
-            IMongoDatabase trendingDatabase = client.GetDatabase("TrendingDatabase");
-            IMongoDatabase theatreDatabase = client.GetDatabase("TheatreDatabase");
-
-            // Collections in their respective databases
-            _popularCollection = popularDatabase.GetCollection<Popular>("PopularCollection");
-            _trendingCollection = trendingDatabase.GetCollection<Popular>("TrendingCollection");
-            _theatreCollection = theatreDatabase.GetCollection<Popular>("TheatreCollection");
+            // Initialize collections
+            _popularCollection = database.GetCollection<Popular>(mongoDBSettings.Value.PopularCollectionName);
+            _trendingCollection = database.GetCollection<Popular>(mongoDBSettings.Value.TrendingCollectionName);
+            _theatreCollection = database.GetCollection<Popular>(mongoDBSettings.Value.TheatreCollectionName);
         }
-
-        // Methods to interact with the collections
 
         public async Task<List<Popular>> GetPopularMoviesAsync()
         {

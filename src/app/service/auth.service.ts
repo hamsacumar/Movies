@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(private router:Router) {}
+ 
+  constructor(private router:Router,) {}
     Login(uname:String,pword:String){
       if(uname === 'suren' && pword === '1234'){
         return 200;

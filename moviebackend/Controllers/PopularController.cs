@@ -17,6 +17,14 @@ namespace MongoExample.Controllers
             _mongoDBService = mongoDBService;
         }
 
+        // GET: api/movies/popular
+        [HttpGet("popular")]
+        public async Task<ActionResult<List<Popular>>> GetPopularMovies()
+        {
+            var popularMovies = await _mongoDBService.GetPopularMoviesAsync();
+            return Ok(popularMovies);
+        }
+
         // GET: api/movies/trending
         [HttpGet("trending")]
         public async Task<ActionResult<List<Popular>>> GetTrendingMovies()
@@ -31,14 +39,6 @@ namespace MongoExample.Controllers
         {
             var theatreMovies = await _mongoDBService.GetTheatreMoviesAsync();
             return Ok(theatreMovies);
-        }
-
-        // GET: api/movies/popular
-        [HttpGet("popular")]
-        public async Task<ActionResult<List<Popular>>> GetPopularMovies()
-        {
-            var popularMovies = await _mongoDBService.GetPopularMoviesAsync();
-            return Ok(popularMovies);
         }
     }
 }
